@@ -1,0 +1,44 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+.container {
+  background-color: #333;
+  height: 30vh;
+  margin-bottom: 1rem;
+  display: flex;
+  /* Define la direccioñn de los elementos */
+  flex-direction: row; /* row | column | row-reverse | column-reverse */
+  /* Define el comportamiento cuando los hijos no caben */
+  flex-wrap: nowrap; /* nowrap | wrap | wrap-reverse */
+  /* flex-flow: row wrap; */
+  /* Define la alineación de los elementos hijos respecto al eje pricipal */
+  justify-content: flex-start; /* flex-start | center | flex-end | space-around | space-between | space-evenly */
+  /* Define la alineacion de los elementos hijo en el eje transversal */
+  align-items: stretch; /* stretch | flex-start | flex-end | center | baseline */
+  /* Define la alineacion en el eje transversal pero tiene que haber varias filas */
+  align-content: stretch; /* stretch | flex-start | flex-end | center | space-around | space-between | space-evenly   */
+  /* Define la distancia del espacio entre elementos */
+  gap: 1rem;
+}
+.item {
+  background-color: #666;
+  border: medium solid #999;
+  /* width: 20%; */
+  /* height: 20%; */
+  /* Factor de crecimiento de los elementos hijo (No acepta valores negativos) */
+  flex-grow: 1;
+  /* Factor que tienen los elementos hijos para encogerse */
+  flex-shrink: 1;
+  /* Tamaño al ancho inicial de los elementos independientemente del 'width' */
+  flex-basis: auto;
+}
+.item:nth-child(2) {
+  /* font-size: 2rem; */
+  flex-grow: 2;
+}
+.item:nth-child(3) {
+  /* font-size: 2rem; */
+  flex-grow: 3;
+}
